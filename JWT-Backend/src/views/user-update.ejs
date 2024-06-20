@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="edit-user-infor-container">
+                <form method="post" action="/user/update-user">
+
+                    <div class="pt-3">
+                        <h3>Create a new user</h3>
+                    </div>
+                    <input hidden value="<%= userData.id%>" name="id" />
+                    <div class="mb-3 mt-3 col-6">
+                        <label for="email" class="form-label">Email address</label>
+                        <input value="<%= userData.email%>" type="email" class="form-control" name="email" id="email"
+                            required>
+                    </div>
+                    <div class="col-6"></div>
+
+                    <div class="col-6"></div>
+                    <div class="col-6 pb-3">
+                        <label for="username" class="form-label">User name</label>
+                        <input value="<%= userData.username%>" type="text" class="form-control" name="username"
+                            d="username" required>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
